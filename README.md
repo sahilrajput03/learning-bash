@@ -12,3 +12,45 @@
 ## Format `.bash` and `.sh` file on save in VsCode
 
 Just install this extension: https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format and turn the default format in vsocde setting as 'null', so that appropriate formatters will be chosen for appropriate files.
+
+## Code Generated via AutoDocs
+
+### File - `0.sh`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./0.sh) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+### File - `1.sh`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./1.sh) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+### File - `2.sh`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./2.sh) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+### File - `3.sh`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./3.sh) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+### File - `4.sh`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./4.sh) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+### File - `5.sh`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./5.sh) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+### File - `6.sh`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./6.sh) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+### File - `7.sh`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./7.sh) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
