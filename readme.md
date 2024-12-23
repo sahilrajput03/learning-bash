@@ -1,12 +1,14 @@
 # Readme
 
-I want to proficient in bash programming language thus this repo is my testing arena for bash scripts.
+**Quick Links:**
 
-I am running these script in watch mode using `bmon` from the `my_bin` repository or even better scritpt (coz shorter in name) `bm`.
+- Docs Bash - TLDP: https://tldp.org/LDP/abs/html
 
-The reference for the bash I am using is: <https://tldp.org/LDP/abs/html/>
+**Running these scripts:**
 
-## Want code to format on save for .bash and .sh file ..??
-  
-Just install this extension: https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format and turn the default format in vsocde setting as 'null', so that appropriate formatters will be chosen for appropriate files,yo!!🤺︎🤺︎🤺︎
+- Use Code Runner (VsCode Extension) - [Google Doc](https://docs.google.com/document/d/1xLXMFJSQide-kGKkkDRA2sjpApDR-eBlddl0cWyZJOE/edit?tab=t.0#heading=h.i48pxvjshf90)
+- Using `bmon` from the `my_bin` repository (or using `bm`)
 
+## Format `.bash` and `.sh` file on save in VsCode
+
+Just install this extension: https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format and turn the default format in vsocde setting as 'null', so that appropriate formatters will be chosen for appropriate files.

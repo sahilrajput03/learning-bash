@@ -9,7 +9,7 @@ if [ "$UID" != "$ROOT_UID" ]; then
 fi
 
 if [ "$UID" -ne "$ROOT_UID" ]; then # -ne is same as !=
-  echo "No, (WITH '-ne') you dont have root permissions!"
+  echo "No, you dont have root permissions! (WITH '-ne')"
 fi
 
 if [ "$UID" = 1000 ]; then # POSIX sh
