@@ -17,6 +17,8 @@ Just install this extension: https://marketplace.visualstudio.com/items?itemName
 
 ### File - `0.sh`
 
+Simple echo example.
+
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./0.sh) -->
 <!-- The below code snippet is automatically added from ./0.sh -->
 ```sh
