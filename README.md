@@ -13,7 +13,21 @@
 
 Just install this extension: https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format and turn the default format in vsocde setting as 'null', so that appropriate formatters will be chosen for appropriate files.
 
+## Run multiple commands on failure of some command
+
+*TODO: Move to a `newfile.sh` in this folder and show via autodocs instead.*
+
+```bash
+# setup
+mkdir "$TEMP_DIR" && cd "$TEMP_DIR" || {
+		echo "Error: Failed to create directory [$TEMP_DIR], aborting early"
+        exit 1
+}
+```
+
 ## Create file `myfile.txt` with content using `cat` command
+
+*TODO: Move to a `newfile.sh` in this folder and show via autodocs instead.*
 
 ```bash
 cat << EOF > myfile.txt
