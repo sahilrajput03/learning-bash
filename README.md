@@ -13,6 +13,14 @@
 
 Just install this extension: https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format and turn the default format in vsocde setting as 'null', so that appropriate formatters will be chosen for appropriate files.
 
+## Create file `myfile.txt` with content using `cat` command
+
+```bash
+cat << EOF > myfile.txt
+Hello world
+EOF
+```
+
 ## Code Generated via AutoDocs
 
 ### File - `0.sh`
