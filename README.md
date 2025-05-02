@@ -13,6 +13,16 @@
 
 Just install this extension: https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format and turn the default format in vsocde setting as 'null', so that appropriate formatters will be chosen for appropriate files.
 
+## Using `&` to run commands in background and switching to them using `fg`
+
+```bash
+# Run directly listing web server via python's builtin module
+python3 -m http.server --directory . &
+
+# Now you can switch back to this serve using fg command
+fg
+```
+
 ## Run multiple commands on failure of some command
 
 *TODO: Move to a `newfile.sh` in this folder and show via autodocs instead.*
