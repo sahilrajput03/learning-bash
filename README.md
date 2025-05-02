@@ -2,6 +2,7 @@
 
 **Quick Links:**
 
+- ❤️Learn Bash: [Click here](https://github.com/sahilrajput03/sahilrajput03/blob/main/learn-bash.md)
 - Docs Bash - TLDP: https://tldp.org/LDP/abs/html
 
 **Running these scripts:**
