@@ -2,6 +2,7 @@
 
 **Quick Links:**
 
+- ❤️Learn Bash: [Click here](https://github.com/sahilrajput03/sahilrajput03/blob/main/learn-bash.md)
 - Docs Bash - TLDP: https://tldp.org/LDP/abs/html
 
 **Running these scripts:**
@@ -12,6 +13,38 @@
 ## Format `.bash` and `.sh` file on save in VsCode
 
 Just install this extension: https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format and turn the default format in vsocde setting as 'null', so that appropriate formatters will be chosen for appropriate files.
+
+## Using `&` to run commands in background and switching to them using `fg`
+
+```bash
+# Run directly listing web server via python's builtin module
+python3 -m http.server --directory . &
+
+# Now you can switch back to this serve using fg command
+fg
+```
+
+## Run multiple commands on failure of some command
+
+*TODO: Move to a `newfile.sh` in this folder and show via autodocs instead.*
+
+```bash
+# setup
+mkdir "$TEMP_DIR" && cd "$TEMP_DIR" || {
+		echo "Error: Failed to create directory [$TEMP_DIR], aborting early"
+        exit 1
+}
+```
+
+## Create file `myfile.txt` with content using `cat` command
+
+*TODO: Move to a `newfile.sh` in this folder and show via autodocs instead.*
+
+```bash
+cat << EOF > myfile.txt
+Hello world
+EOF
+```
 
 ## Code Generated via AutoDocs
 
