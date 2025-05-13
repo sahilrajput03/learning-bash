@@ -141,3 +141,8 @@ echo $A
 echo $B
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
+
+### File - `8.sh`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./8.sh) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
