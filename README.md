@@ -225,4 +225,3 @@ echo Program never reaches here✅ # This line is never run.
 ### File - `9.sh`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./8.sh) -->
-<!-- MARKDOWN-AUTO-DOCS:END -->

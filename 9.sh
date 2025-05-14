@@ -1,5 +1,5 @@
 #!/bin/bash
-# * Learn about `return` and `exit` keyword in bash
+# * Learn about `return` and `exit` keyword
 
 a() {
     echo "🚀Running function a"
