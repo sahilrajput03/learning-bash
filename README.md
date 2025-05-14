@@ -240,10 +240,12 @@ exitCode=$?
 echo -e "Return value/Exit code of function c: $exitCode \n"
 # OUTPUT: Return value/Exit code of function c: 2
 
-# ✅Learn: At top level we can only use `exit` because `return` is not
-#       valid at top level (i.e, we get error if we use `return` at top level)
-# ✅Learn: If we use `exit` instead of `exit 3` below then exit code of
-#       this script will be 1 because function a returns 1
+# ✅Learn:
+#       1. At top level we can only use `exit` because `return` is not
+#           valid at top level (i.e, we get error if we use `return`
+#           at top level)
+#       2. If we use `exit` instead of `exit 3` below then exit code
+#           of this script will be 1 because function a returns 1
 a || exit 3
 echo Program never reaches here✅ # This line is never run.
 ```
