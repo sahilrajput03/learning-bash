@@ -89,12 +89,13 @@ ls
 <!-- The below code snippet is automatically added from ./3.sh -->
 ```sh
 #/usr/bin/env bash
+# Learn:
+# 1. If you run the script via 'sudo' prefixed you would see `0` value
+#       because that denotes if the program is run with root access
+#       or not.
+# 2. If the user executing the script has root permissions by default
+#       then wihout using `sudo` the output would be `0`.
 echo $UID
-echo "If you run the script via 'sudo' prefixed you would see '0' value because
-# that denotes if the program is initiaed as root access or not."
-echo
-echo "If the user executing the script has root permissions by default then wihout
-sudo the output would be '0'"
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
