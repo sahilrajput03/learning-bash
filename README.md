@@ -204,5 +204,5 @@ echo -e "Return value/Exit code of function a: $exitCode \n"
 
 ### File - `9.sh`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./8.sh) -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./9.sh) -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
