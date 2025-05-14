@@ -221,3 +221,8 @@ a || exit 1
 echo Program never reaches here✅ # This line is never run.
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
+
+### File - `9.sh`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./8.sh) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
