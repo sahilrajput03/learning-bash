@@ -319,7 +319,7 @@ COMMAND="rm abc.txt"
 #   2. ctrl+c i.e., [SIGINT (2)]
 trap "$COMMAND" exit
 
-sleep 1
+sleep 100
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -327,6 +327,30 @@ sleep 1
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./11.2.sh) -->
 <!-- The below code snippet is automatically added from ./11.2.sh -->
+```sh
+#!/bin/bash -x
+# we enable debug mode with above -x
+
+# 🚀 Run a bash function exit
+
+bye() {
+    echo "Bye bye"
+}
+
+# Runs function if:
+#   1. program exit natually on its own.
+#   2. ctrl+c i.e., [SIGINT (2)]
+trap bye exit
+
+echo "Hello world"
+sleep 100
+```
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+### File - `11.3.sh`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./11.3.sh) -->
+<!-- The below code snippet is automatically added from ./11.3.sh -->
 ```sh
 #!/bin/bash -x
 # we enable debug mode with above -x
@@ -344,15 +368,15 @@ trap 'kill $(jobs -p)' EXIT
 # ps aux | grep '[s]leep 1000'
 
 # Keep the script running so you can intercept ctrl+c signal to kill
-#    this script:
+#    this script and trigger trap command:
 wait
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-### File - `11.3.sh`
+### File - `11.4.sh`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./11.3.sh) -->
-<!-- The below code snippet is automatically added from ./11.3.sh -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./11.4.sh) -->
+<!-- The below code snippet is automatically added from ./11.4.sh -->
 ```sh
 #!/bin/bash -x
 # we enable debug mode with above -x
@@ -373,15 +397,15 @@ trap "kill $process1 $process2" EXIT
 # ps aux | grep '[s]leep 1000'
 
 # Keep the script running so you can intercept ctrl+c signal to kill
-#    this script:
+#    this script and trigger trap command:
 wait
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-### File - `11.4.sh`
+### File - `11.5.sh`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./11.4.sh) -->
-<!-- The below code snippet is automatically added from ./11.4.sh -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./11.5.sh) -->
+<!-- The below code snippet is automatically added from ./11.5.sh -->
 ```sh
 #!/bin/bash -x
 # we enable debug mode with above -x
@@ -395,9 +419,4 @@ tailwindcss -w -i ./app/static/src/main.css -o ./app/static/dist/main.css --mini
 
 flask run
 ```
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-### File - `11.5.sh`
-
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./11.5.sh) -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
