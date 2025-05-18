@@ -300,19 +300,91 @@ fi
 ### File - `11.1.sh`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./11.1.sh) -->
+<!-- The below code snippet is automatically added from ./11.1.sh -->
+```sh
+#!/bin/bash -x
+
+# 1. Amazing guide to using trap by linuxjournal.com at https://www.linuxjournal.com/content/bash-trap-command
+# 2. Set a function to be executed in the trap commands. Source: https://stackoverflow.com/a/3338302/10012446
+# 3. Reset trap command:
+#   Source: https://stackoverflow.com/a/31202968/10012446
+#   Source2: https://bash.cyberciti.biz/guide/How_to_clear_trap#:~:text=Enter%20number%20(%2D9999%20to%20exit)%20%3A%20999%20999%20is%20an,exit)%20%3A%20%2D9999%20Bye!
+
+# Create file abc.txt
+touch abc.txt
+
+COMMAND="rm abc.txt"
+# Runs command if:
+#   1. program exit natually on its own.
+#   2. ctrl+c i.e., [SIGINT (2)]
+trap "$COMMAND" exit
+
+sleep 1
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### File - `11.2.sh`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./11.2.sh) -->
+<!-- The below code snippet is automatically added from ./11.2.sh -->
+```sh
+#!/bin/bash -x
+# we enable debug mode with above -x
+
+# 🚀 Kill all background jobs on exit using `jobs -p`
+
+# create two processes with sleep 5 in background and kill them on exit with trap
+sleep 5 &
+sleep 5 &
+
+# Kill all background jobs on exit:
+trap 'kill $(jobs -p)' EXIT
+
+# In any temrinal you can check if the process is running with:
+# ps aux | grep '[s]leep 5'
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### File - `11.3.sh`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./11.3.sh) -->
+<!-- The below code snippet is automatically added from ./11.3.sh -->
+```sh
+#!/bin/bash -x
+# we enable debug mode with above -x
+
+# 🚀 Kill individual processes on exit
+
+# Create two processes with sleep 5 in background and kill them on
+#   exit with trap
+sleep 5 &
+process1=$!
+
+sleep 5 &
+process2=$!
+
+trap "kill $process1 $process2" EXIT
+
+# In any temrinal you can check if the process is running with:
+# ps aux | grep '[s]leep 5'
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### File - `11.4.sh`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./11.4.sh) -->
+<!-- The below code snippet is automatically added from ./11.4.sh -->
+```sh
+#!/bin/bash -x
+# we enable debug mode with above -x
+
+# 🚀 Kill process using `pkill` to match process name on exit
+
+trap 'pkill -f tailwind' exit
+
+# Run tailwindcss with watch mode and send it to background
+tailwindcss -w -i ./app/static/src/main.css -o ./app/static/dist/main.css --minify &
+
+flask run
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
