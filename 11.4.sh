@@ -1,11 +1,21 @@
 #!/bin/bash -x
 # we enable debug mode with above -x
 
-# 🚀 Kill process using `pkill` to match process name on exit
+# 🚀 Kill individual processes on exit
 
-trap 'pkill -f tailwind' exit
+# Create two processes with sleep 5 in background and kill them on
+#   exit with trap
+sleep 1000 &
+process1=$!
 
-# Run tailwindcss with watch mode and send it to background
-tailwindcss -w -i ./app/static/src/main.css -o ./app/static/dist/main.css --minify &
+sleep 1000 &
+process2=$!
 
-flask run
+trap "kill $process1 $process2" EXIT
+
+# In any temrinal you can check if the process is running with:
+# ps aux | grep '[s]leep 1000'
+
+# Keep the script running so you can intercept ctrl+c signal to kill
+#    this script and trigger trap command:
+wait

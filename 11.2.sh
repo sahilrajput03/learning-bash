@@ -1,18 +1,16 @@
 #!/bin/bash -x
 # we enable debug mode with above -x
 
-# 🚀 Kill all background jobs on exit using `jobs -p`
+# 🚀 Run a bash function exit
 
-# create two processes with sleep 5 in background and kill them on exit with trap
-sleep 1000 &
-sleep 1000 &
+bye() {
+    echo "Bye bye"
+}
 
-# Kill all background jobs on exit:
-trap 'kill $(jobs -p)' EXIT
+# Runs function if:
+#   1. program exit natually on its own.
+#   2. ctrl+c i.e., [SIGINT (2)]
+trap bye exit
 
-# In any temrinal you can check if the process is running with:
-# ps aux | grep '[s]leep 1000'
-
-# Keep the script running so you can intercept ctrl+c signal to kill
-#    this script:
-wait
+echo "Hello world"
+sleep 100

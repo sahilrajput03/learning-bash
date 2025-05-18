@@ -15,4 +15,4 @@ COMMAND="rm abc.txt"
 #   2. ctrl+c i.e., [SIGINT (2)]
 trap "$COMMAND" exit
 
-sleep 1
+sleep 100
