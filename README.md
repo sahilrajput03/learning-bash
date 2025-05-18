@@ -89,12 +89,13 @@ ls
 <!-- The below code snippet is automatically added from ./3.sh -->
 ```sh
 #/usr/bin/env bash
+# Learn:
+# 1. If you run the script via 'sudo' prefixed you would see `0` value
+#       because that denotes if the program is run with root access
+#       or not.
+# 2. If the user executing the script has root permissions by default
+#       then wihout using `sudo` the output would be `0`.
 echo $UID
-echo "If you run the script via 'sudo' prefixed you would see '0' value because
-# that denotes if the program is initiaed as root access or not."
-echo
-echo "If the user executing the script has root permissions by default then wihout
-sudo the output would be '0'"
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -104,13 +105,27 @@ sudo the output would be '0'"
 <!-- The below code snippet is automatically added from ./4.sh -->
 ```sh
 #!/bin/bash
-ROOT_UID=0 # Only users with $UID 0 have root privileges.
 
-if [ "$UID" -ne "$ROOT_UID" ]; then
-  echo "Must be root to run this script."
-  exit $E_NOTROOT
-fi
+# Learn you can use either `UID` or `EUID`, both performs exactly same in
+#     my testing experience. EUID is almost always used by the kernel and
+#     most system calls (e.g., open(), chmod(), kill()) to check
+#     permissions.
 
+# * Checking if root user at top level (not inside any function)
+
+echo "UID: $UID"
+# Output: 0 (Always 0 for "root" user)
+# Output: 1000 (for "array" user)
+
+require_root() {
+  ROOT_UID=0 # Only users with $UID 0 have root privileges.
+  if [ "$UID" -ne "$ROOT_UID" ]; then
+    echo "Must be root to run this script."
+    return 1
+  fi
+}
+
+require_root || exit 1
 echo Congrats you are root user.
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
