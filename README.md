@@ -266,10 +266,10 @@ echo Program never reaches here✅ # This line is never run.
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-### File - `9.sh`
+### File - `10.sh`
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./9.sh) -->
-<!-- The below code snippet is automatically added from ./9.sh -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./10.sh) -->
+<!-- The below code snippet is automatically added from ./10.sh -->
 ```sh
 #!/bin/bash
 # * Learn about `return` and `exit` keyword
