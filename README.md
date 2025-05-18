@@ -420,3 +420,8 @@ tailwindcss -w -i ./app/static/src/main.css -o ./app/static/dist/main.css --mini
 flask run
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
+
+### File - `12.sh`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./12.sh) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
