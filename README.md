@@ -272,45 +272,27 @@ echo Program never reaches here✅ # This line is never run.
 <!-- The below code snippet is automatically added from ./10.sh -->
 ```sh
 #!/bin/bash
-# * Learn about `return` and `exit` keyword
 
-a() {
-    echo "🚀Running function a"
-    return 1 # Default return value is 0
-}
-a
-exitCode=$?
-echo -e "Return value/Exit code of function a: $exitCode \n"
-# OUTPUT: Return value/Exit code of function a: 1
+# -e – file exists (whether regular file, directory, etc.)
+# -f – file exists and is a regular file
+# -d – file exists and is a directory
 
-b() {
-    echo "🚀Running function b"
-    # Learn: We are using `return` to return the exit code of function a
-    a || return
-    echo "🎉 Function b ends here." # This line is never run.
-}
-b
-exitCode=$?
-echo -e "Return value/Exit code of function b: $exitCode \n"
-# OUTPUT: Return value/Exit code of function b: 1
+if [ -e "10.sh" ]; then
+    echo "✅File exists."
+else
+    echo "❌File does not exist."
+fi
 
-c() {
-    echo "🚀Running function c"
-    a || return 2
-    echo "🎉 Function c ends here." # This line is never run.
-}
-c
-exitCode=$?
-echo -e "Return value/Exit code of function c: $exitCode \n"
-# OUTPUT: Return value/Exit code of function c: 2
+if [ -f "10.sh" ]; then
+    echo "✅File exists."
+else
+    echo "❌File does not exist."
+fi
 
-# ✅Learn:
-#       1. At top level we can only use `exit` because `return` is not
-#           valid at top level (i.e, we get error if we use `return`
-#           at top level)
-#       2. If we use `exit` instead of `exit 3` below then exit code
-#           of this script will be 1 because function a returns 1
-a || exit 3
-echo Program never reaches here✅ # This line is never run.
+if [ -d ".github" ]; then
+    echo "✅Directory exists."
+else
+    echo "❌Directory does not exist."
+fi
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
