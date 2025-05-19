@@ -425,3 +425,18 @@ false
 echo "Exit status of 'false' command: $?"
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
+
+### File - `13.sh`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./13.sh) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+### File - `14.sh`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./14.sh) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+### File - `15.sh`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./15.sh) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
