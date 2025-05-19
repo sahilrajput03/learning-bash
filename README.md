@@ -387,6 +387,9 @@ trap 'pkill -f tailwind' exit
 tailwindcss -w -i ./app/static/src/main.css -o ./app/static/dist/main.css --minify &
 
 flask run
+
+# Another intersting usage found in cloud-init docs to stop python server on exiting qemu instance shell command:
+# Check @ https://github.com/sahilrajput03/config/blob/852bda337a6de7df6e767b01bffa3ee9835e9914/_linode/testing-cloud-init-with-qemu/with-archlinux-cloudimg/SCRIPT_QEMU.sh
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
