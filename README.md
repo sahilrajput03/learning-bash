@@ -429,16 +429,69 @@ echo "Exit status of 'false' command: $?"
 ### File - `13.sh`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./13.sh) -->
+<!-- The below code snippet is automatically added from ./13.sh -->
+```sh
+#!/bin/bash
+
+# 🚀 Run multiple commands on failure of some commands
+
+# setup
+TEMP_DIR=""
+mkdir "$TEMP_DIR" && cd "$TEMP_DIR" || {
+    echo "Error: Failed to create directory [$TEMP_DIR], aborting early"
+    echo "Bye bye 👋"
+    exit 1
+}
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### File - `14.sh`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./14.sh) -->
+<!-- The below code snippet is automatically added from ./14.sh -->
+```sh
+#!/bin/bash
+
+# 🚀Create file myfile.txt with content using cat command
+
+# Note: If file already exists, it will be overwritten [TESTED]
+cat <<EOF >myfile.txt
+Hello world
+EOF
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### File - `15.sh`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./15.sh) -->
+<!-- The below code snippet is automatically added from ./15.sh -->
+```sh
+#!/bin/bash
+
+# * 🚀 Using `&` to run commands in background and switching to them using `fg`
+
+# & ⚠️ NOTE: This script must be sourced (run with 'source' command or
+# &          '.') to work properly [TESTED on linux and macos]
+# Example: source 15.sh or . ./15.sh
+
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    echo "Please run this script using 'source' command or '.'"
+    exit 1
+fi
+
+# Start a Python HTTP server (port 8000) for serving files in current directory
+# This runs in background and can be brought to foreground with 'fg' command
+python3 -m http.server --directory . &
+
+echo "✅Process started with process ID: $!"
+
+# Also, you can:
+#   - get process ID via `pgrep python`
+#   - kill process via via `pkill python`
+
+# Now you can switch back to this serve using fg command
+# fg
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### File - `16.sh`
