@@ -551,3 +551,8 @@ calculate_time() {
 calculate_time 'sleep 1 && echo boom && sleep 1'
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
+
+### File - `17.sh`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./17.sh) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
