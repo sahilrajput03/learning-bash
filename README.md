@@ -33,6 +33,18 @@ echo Hello, from example.
 ### File - `1.1.sh`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./1.1.sh) -->
+<!-- The below code snippet is automatically added from ./1.1.sh -->
+```sh
+#!/bin/bash
+echo Good Command && echo Success✅ || echo Failed❌
+# Good Command
+# Success✅
+
+BadCommand && echo Success✅ || echo Failed❌
+# Output:
+# 4: BadCommand: command not found
+# Failed❌
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### File - `1.sh`
