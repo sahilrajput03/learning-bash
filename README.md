@@ -555,4 +555,24 @@ calculate_time 'sleep 1 && echo boom && sleep 1'
 ### File - `17.sh`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./17.sh) -->
+<!-- The below code snippet is automatically added from ./17.sh -->
+```sh
+#!/bin/bash
+
+#  Array / List in bash and zsh (`sh` lacks array support)
+array=(item1 item2 item3)
+
+# "${FILES[@]}" safely expands to each element.
+for item in "${array[@]}"; do
+    echo "$item"
+done
+
+echo -e "\n✅All elements of array:"
+echo ${array[@]}
+echo ${array[*]}
+
+# 🔍 [@] vs [*] — What's the Difference?
+# ${array[@]}: Each element is treated as a separate word, preserving spaces.
+# ${array[*]}: All elements are treated as one word, especially inside quotes.
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
