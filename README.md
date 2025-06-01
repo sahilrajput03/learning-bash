@@ -272,6 +272,10 @@ fi
 <!-- The below code snippet is automatically added from ./11.1.sh -->
 ```sh
 #!/bin/bash -x
+# we enable debug mode with above -x
+
+# 🚀 Run a command on program exit
+# 🚀 Learn `wait` command.
 
 # ✅ Learn: You can use microseconds with sleep command too:
 # sleep 0.1
@@ -291,7 +295,21 @@ COMMAND="rm abc.txt"
 #   2. ctrl+c i.e., [SIGINT (2)]
 trap "$COMMAND" exit
 
-sleep 100
+# sleep 100
+
+# ✅ `wait` command
+# * 1️⃣ The wait command in Bash pauses the execution of a script until
+#      all background jobs or a specific job (by PID or job ID) finish.
+#   It returns the exit status of the waited-for process.
+#   Usage:
+#       wait → waits for all background jobs to complete.
+#       wait <PID> → waits for a specific process ID to complete.
+#       wait %<job_id> → waits for a specific job (e.g., %1) to complete.
+#  2️⃣ ✅ Keep the script running until previous background processes
+#    before the wait command are running so you can intercept ctrl+c
+#    signal to kill this script and trigger trap command to kill the
+#    earlier background processes as well.
+wait
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -303,7 +321,7 @@ sleep 100
 #!/bin/bash -x
 # we enable debug mode with above -x
 
-# 🚀 Run a bash function exit
+# 🚀 Run a bash function on program exit
 
 bye() {
     echo "Bye bye"
@@ -315,7 +333,9 @@ bye() {
 trap bye exit
 
 echo "Hello world"
-sleep 100
+# sleep 100
+
+wait
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -327,7 +347,7 @@ sleep 100
 #!/bin/bash -x
 # we enable debug mode with above -x
 
-# 🚀 Kill all background jobs on exit using `jobs -p`
+# 🚀 Kill all background jobs using `jobs -p` on exit
 
 # create two processes with sleep 5 in background and kill them on exit with trap
 sleep 1000 &
@@ -339,8 +359,6 @@ trap 'kill $(jobs -p)' EXIT
 # In any temrinal you can check if the process is running with:
 # ps aux | grep '[s]leep 1000'
 
-# Keep the script running so you can intercept ctrl+c signal to kill
-#    this script and trigger trap command:
 wait
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -368,8 +386,6 @@ trap "kill $process1 $process2" EXIT
 # In any temrinal you can check if the process is running with:
 # ps aux | grep '[s]leep 1000'
 
-# Keep the script running so you can intercept ctrl+c signal to kill
-#    this script and trigger trap command:
 wait
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -403,8 +419,8 @@ flask run
 ```sh
 #!/bin/bash
 
-# & 🚀 Runing two while loops in background and killing them `ctrl+c`
-# 🚀 Learn: `wait`, `pgrep` (pgrep -f), `pkill` (pkill -f), `osascript` Cli
+# 🚀 Running two while loops in background and killing them `ctrl+c`
+# 🚀 Learn: `pgrep` (pgrep -f), `pkill` (pkill -f), `osascript` Cli
 #         to show system notifications in macos.
 
 echo "PID of the current shell: $" # double $ sign [autodocs issue]
@@ -429,12 +445,6 @@ echo "PID2: $PID2"
 # This is executed when you press ctrl+c
 trap "kill $PID1 $PID2; echo 'Killed background operations.'" EXIT
 
-# * ✅ The wait command in Bash pauses the execution of a script until all background jobs or a specific job (by PID or job ID) finish.
-#   It returns the exit status of the waited-for process.
-#   Usage:
-#       wait → waits for all background jobs to complete.
-#       wait <PID> → waits for a specific process ID to complete.
-#       wait %<job_id> → waits for a specific job (e.g., %1) to complete.
 wait
 
 # * ✅ For manual tracking if it gets orphaned in worst case:
