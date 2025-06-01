@@ -399,7 +399,7 @@ flask run
 <!-- The below code snippet is automatically added from ./11.6.sh -->
 ```sh
 # & 🚀 Runing two while loops in background and killing them `ctrl+c`
-# Learn: `wait` command
+# Learn: `wait`, `pgrep`, `pkill` commands.
 
 # Learn: In macos `osascript` is used to show system notifications.
 
