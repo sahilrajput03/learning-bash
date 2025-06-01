@@ -3,7 +3,8 @@
 # From ChatGPT: https://chatgpt.com/c/682a21f9-c860-8007-b816-51d90d5438ae
 
 # VARIABLE MEANING
-# $$	    Process ID (PID) of the current shell.
+# $$ 	    Process ID (PID) of the current shell.
+#   ^ (double $ sign)[#autodocs issue]
 # $?	    Exit status of the last executed command. 0 means success, any other value usually indicates an error.
 # $!	    PID of the last background command.
 # $0	    Name of the script itself.
@@ -16,7 +17,7 @@
 echo "Script name: $0"
 echo "First arg: $1"
 echo "All args: $@"
-echo "PID of this script: $$"
+echo "PID of this script: $$" # double $ sign [autodocs issue]
 
 sleep 5 &
 echo "Background process PID: $!"

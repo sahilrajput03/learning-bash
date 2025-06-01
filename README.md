@@ -393,6 +393,12 @@ flask run
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
+### File - `11.6.sh`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./11.6.sh) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+
 ### File - `12.sh`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./12.sh) -->
