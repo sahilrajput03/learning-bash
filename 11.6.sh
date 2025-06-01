@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # & 🚀 Runing two while loops in background and killing them `ctrl+c`
-# Learn: `wait`, `pgrep` (pgrep -f), `pkill` (pkill -f), `osascript` Cli
+# 🚀 Learn: `wait`, `pgrep` (pgrep -f), `pkill` (pkill -f), `osascript` Cli
 #         to show system notifications in macos.
 
 echo "PID of the current shell: $$" # double $ sign [autodocs issue]
