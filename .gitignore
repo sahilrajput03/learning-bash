@@ -35,3 +35,5 @@
 **/.vercel
 
 tempCodeRunnerFile.sh
+
+*.log

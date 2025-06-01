@@ -1,7 +1,7 @@
 #!/bin/bash -x
 # we enable debug mode with above -x
 
-# 🚀 Run a bash function exit
+# 🚀 Run a bash function on program exit
 
 bye() {
     echo "Bye bye"
@@ -13,4 +13,6 @@ bye() {
 trap bye exit
 
 echo "Hello world"
-sleep 100
+# sleep 100
+
+wait

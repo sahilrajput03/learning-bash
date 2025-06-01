@@ -16,6 +16,4 @@ trap "kill $process1 $process2" EXIT
 # In any temrinal you can check if the process is running with:
 # ps aux | grep '[s]leep 1000'
 
-# Keep the script running so you can intercept ctrl+c signal to kill
-#    this script and trigger trap command:
 wait
