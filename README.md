@@ -403,7 +403,7 @@ flask run
 
 # Learn: In macos `osascript` is used to show system notifications.
 
-echo "Process ID (PID) of the current shell: $"
+echo "Process ID (PID) of the current shell: $" # double $ sign [autodocs issue]
 
 # First task in asynchronous mode
 while true; do
