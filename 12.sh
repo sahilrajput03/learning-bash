@@ -2,8 +2,9 @@
 
 # From ChatGPT: https://chatgpt.com/c/682a21f9-c860-8007-b816-51d90d5438ae
 
-# VARIABLE	MEANING
-# $$	    Process ID (PID) of the current shell.
+# VARIABLE MEANING
+# "$$"	    Process ID (PID) of the current shell. (Learn: It can be used without quotes as well but I'm using quotes here so autodocs can render two dollars otherwise it renders only one dollar when used without quotes.)
+# '$$'	    Process ID (PID) of the current shell. (Learn: It can be used without quotes as well but I'm using quotes here so autodocs can render two dollars otherwise it renders only one dollar when used without quotes.)
 # $?	    Exit status of the last executed command. 0 means success, any other value usually indicates an error.
 # $!	    PID of the last background command.
 # $0	    Name of the script itself.
