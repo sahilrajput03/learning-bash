@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-# Learn: You can use microseconds with sleep command too:
+# ✅Learn: You can use microseconds with sleep command too:
 # sleep 0.1
 
 # 1. Amazing guide to using trap by linuxjournal.com at https://www.linuxjournal.com/content/bash-trap-command
