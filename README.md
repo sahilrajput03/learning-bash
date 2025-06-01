@@ -273,7 +273,7 @@ fi
 ```sh
 #!/bin/bash
 
-# 🚀 Run process in background in macos using `air` function from ~/.zshrc (#true background process, #detach process)
+# 🚀 Run process in background in macos using `air` function from ~/.zshrc (Tags: #true background process, #detach process)
 # 🚀 Send system notifications in macos
 
 #   Usage: In macos you can run this script in background via: [✅TESTED]
