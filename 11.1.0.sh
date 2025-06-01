@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # 🚀 Run process in background in macos using `air` function from ~/.zshrc (Tags: #true background process, #detach process)
 # 🚀 Send system notifications in macos

@@ -24,7 +24,7 @@ Simple echo example.
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./0.sh) -->
 <!-- The below code snippet is automatically added from ./0.sh -->
 ```sh
-#!/bin/bash
+#!/usr/bin/env bash
 # set -x
 echo Hello, from example.
 ```
@@ -35,7 +35,7 @@ echo Hello, from example.
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./1.sh) -->
 <!-- The below code snippet is automatically added from ./1.sh -->
 ```sh
-#!/bin/bash
+#!/usr/bin/env bash
 echo Hello i am sahil.
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -45,7 +45,7 @@ echo Hello i am sahil.
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./2.sh) -->
 <!-- The below code snippet is automatically added from ./2.sh -->
 ```sh
-#!/bin/bash
+#!/usr/bin/env bash
 var=~/Desktop
 cd $var
 ls
@@ -73,7 +73,7 @@ echo $UID
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./4.sh) -->
 <!-- The below code snippet is automatically added from ./4.sh -->
 ```sh
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Learn you can use either `UID` or `EUID`, both performs exactly same in
 #     my testing experience. EUID is almost always used by the kernel and
@@ -104,7 +104,7 @@ echo Congrats you are root user.
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./5.sh) -->
 <!-- The below code snippet is automatically added from ./5.sh -->
 ```sh
-#!/bin/bash
+#!/usr/bin/env bash
 ROOT_UID=0
 if [ "$UID" = "$ROOT_UID" ]; then
   echo "Yes, you have root permissions!"
@@ -136,7 +136,7 @@ fi
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./6.sh) -->
 <!-- The below code snippet is automatically added from ./6.sh -->
 ```sh
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo Read this amazing answer on stackoverflow: https://stackoverflow.com/a/40431336/10012446
 echo "There is lots of way to compare value like string and numbers differenctly and using the C way i.e., == operator as well."
@@ -148,7 +148,7 @@ echo "There is lots of way to compare value like string and numbers differenctly
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./7.sh) -->
 <!-- The below code snippet is automatically added from ./7.sh -->
 ```sh
-#!/bin/bash
+#!/usr/bin/env bash
 #This file demonstrates simple string manipulation with variables.
 echo -----
 A="Sahil" 				#Note you should ALWAYS use quotes around text when assigning it to variable.
@@ -164,7 +164,7 @@ echo $B
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./8.sh) -->
 <!-- The below code snippet is automatically added from ./8.sh -->
 ```sh
-#!/bin/bash
+#!/usr/bin/env bash
 # * Learn about `return`
 
 a() {
@@ -191,7 +191,7 @@ echo -e "Return value/Exit code of function a: $exitCode \n"
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./9.sh) -->
 <!-- The below code snippet is automatically added from ./9.sh -->
 ```sh
-#!/bin/bash
+#!/usr/bin/env bash
 # * Learn about `return` and `exit` keyword
 
 a() {
@@ -240,7 +240,7 @@ echo Program never reaches here✅ # This line is never run.
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./10.sh) -->
 <!-- The below code snippet is automatically added from ./10.sh -->
 ```sh
-#!/bin/bash
+#!/usr/bin/env bash
 
 # -e – file exists (whether regular file, directory, etc.)
 # -f – file exists and is a regular file
@@ -271,7 +271,7 @@ fi
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./11.1.0.sh) -->
 <!-- The below code snippet is automatically added from ./11.1.0.sh -->
 ```sh
-#!/bin/bash
+#!/usr/bin/env bash
 
 # 🚀 Run process in background in macos using `air` function from ~/.zshrc (Tags: #true background process, #detach process)
 # 🚀 Send system notifications in macos
@@ -302,7 +302,7 @@ done
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./11.1.sh) -->
 <!-- The below code snippet is automatically added from ./11.1.sh -->
 ```sh
-#!/bin/bash -x
+#!/usr/bin/env bash -x
 # we enable debug mode with above -x
 
 # 🚀 Run a command on program exit
@@ -349,7 +349,7 @@ wait
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./11.2.sh) -->
 <!-- The below code snippet is automatically added from ./11.2.sh -->
 ```sh
-#!/bin/bash -x
+#!/usr/bin/env bash -x
 # we enable debug mode with above -x
 
 # 🚀 Run a bash function on program exit
@@ -375,7 +375,7 @@ wait
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./11.3.sh) -->
 <!-- The below code snippet is automatically added from ./11.3.sh -->
 ```sh
-#!/bin/bash -x
+#!/usr/bin/env bash -x
 # we enable debug mode with above -x
 
 # 🚀 Kill all background jobs using `jobs -p` on exit
@@ -399,7 +399,7 @@ wait
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./11.4.sh) -->
 <!-- The below code snippet is automatically added from ./11.4.sh -->
 ```sh
-#!/bin/bash -x
+#!/usr/bin/env bash -x
 # we enable debug mode with above -x
 
 # 🚀 Kill individual processes on exit
@@ -426,7 +426,7 @@ wait
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./11.5.sh) -->
 <!-- The below code snippet is automatically added from ./11.5.sh -->
 ```sh
-#!/bin/bash -x
+#!/usr/bin/env bash -x
 # we enable debug mode with above -x
 
 # 🚀 Kill process using `pkill` to match process name on exit
@@ -448,7 +448,7 @@ flask run
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./11.6.sh) -->
 <!-- The below code snippet is automatically added from ./11.6.sh -->
 ```sh
-#!/bin/bash
+#!/usr/bin/env bash
 
 # 🚀 Running two while loops in background and killing them `ctrl+c`
 # 🚀 Learn: `pgrep` (pgrep -f), `pkill` (pkill -f), `osascript` Cli
@@ -511,7 +511,7 @@ wait
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./12.sh) -->
 <!-- The below code snippet is automatically added from ./12.sh -->
 ```sh
-#!/bin/bash
+#!/usr/bin/env bash
 
 # From ChatGPT: https://chatgpt.com/c/682a21f9-c860-8007-b816-51d90d5438ae
 
@@ -546,7 +546,7 @@ echo "Exit status of 'false' command: $?"
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./13.1.sh) -->
 <!-- The below code snippet is automatically added from ./13.1.sh -->
 ```sh
-#!/bin/bash
+#!/usr/bin/env bash
 echo Good Command && echo Success✅ || echo Failed❌
 # Good Command
 # Success✅
@@ -563,7 +563,7 @@ BadCommand && echo Success✅ || echo Failed❌
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./13.sh) -->
 <!-- The below code snippet is automatically added from ./13.sh -->
 ```sh
-#!/bin/bash
+#!/usr/bin/env bash
 
 # 🚀 Run multiple commands on failure of some commands
 
@@ -582,7 +582,7 @@ mkdir "$TEMP_DIR" && cd "$TEMP_DIR" || {
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./14.sh) -->
 <!-- The below code snippet is automatically added from ./14.sh -->
 ```sh
-#!/bin/bash
+#!/usr/bin/env bash
 
 # 🚀Create file myfile.txt with content using cat command
 
@@ -598,7 +598,7 @@ EOF
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./15.sh) -->
 <!-- The below code snippet is automatically added from ./15.sh -->
 ```sh
-#!/bin/bash
+#!/usr/bin/env bash
 
 # * 🚀 Using `&` to run commands in background and switching to them using `fg`
 
@@ -631,7 +631,7 @@ echo "✅Process started with process ID: $!"
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./16.sh) -->
 <!-- The below code snippet is automatically added from ./16.sh -->
 ```sh
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo
 
@@ -671,7 +671,7 @@ calculate_time 'sleep 1 && echo boom && sleep 1'
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./17.sh) -->
 <!-- The below code snippet is automatically added from ./17.sh -->
 ```sh
-#!/bin/bash
+#!/usr/bin/env bash
 
 #  Array / List in bash and zsh (`sh` lacks array support)
 array=(item1 item2 item3)

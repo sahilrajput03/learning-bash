@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 echo Good Command && echo Success✅ || echo Failed❌
 # Good Command
 # Success✅

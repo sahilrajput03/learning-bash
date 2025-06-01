@@ -1,8 +1,8 @@
-#!/bin/bash -x
+#!/usr/bin/env bash -x
 # we enable debug mode with above -x
 
 # 🚀 Run a command on program exit
-# 🚀 Learn `wait` command.
+# 🚀 Learn `wait`, `sleep` command.
 
 # ✅ Learn: You can use microseconds with sleep command too:
 # sleep 0.1
@@ -22,7 +22,8 @@ COMMAND="rm abc.txt"
 #   2. ctrl+c i.e., [SIGINT (2)]
 trap "$COMMAND" exit
 
-# sleep 100
+# Create a background running program --- check it vai `pgrep sleep`
+sleep 100 &
 
 # ✅ `wait` command
 # * 1️⃣ The wait command in Bash pauses the execution of a script until

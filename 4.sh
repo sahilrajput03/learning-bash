@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Learn you can use either `UID` or `EUID`, both performs exactly same in
 #     my testing experience. EUID is almost always used by the kernel and

@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/usr/bin/env bash -x
 # we enable debug mode with above -x
 
 # 🚀 Kill all background jobs using `jobs -p` on exit

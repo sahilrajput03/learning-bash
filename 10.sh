@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # -e – file exists (whether regular file, directory, etc.)
 # -f – file exists and is a regular file

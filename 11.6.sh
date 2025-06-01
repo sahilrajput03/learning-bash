@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # 🚀 Running two while loops in background and killing them `ctrl+c`
 # 🚀 Learn: `pgrep` (pgrep -f), `pkill` (pkill -f), `osascript` Cli

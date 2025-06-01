@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # * Learn about `return` and `exit` keyword
 
 a() {

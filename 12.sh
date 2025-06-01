@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # From ChatGPT: https://chatgpt.com/c/682a21f9-c860-8007-b816-51d90d5438ae
 

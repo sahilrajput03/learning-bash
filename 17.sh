@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #  Array / List in bash and zsh (`sh` lacks array support)
 array=(item1 item2 item3)

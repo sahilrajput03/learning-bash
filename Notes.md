@@ -45,7 +45,7 @@ examples of sha-bang
 
 ```bash
 #!/bin/sh
-#!/bin/bash
+#!/usr/bin/env bash
 #!/usr/bin/perl
 #!/usr/bin/tcl
 #!/bin/sed -f

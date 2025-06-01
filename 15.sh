@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # * 🚀 Using `&` to run commands in background and switching to them using `fg`
 

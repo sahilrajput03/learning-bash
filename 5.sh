@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 ROOT_UID=0
 if [ "$UID" = "$ROOT_UID" ]; then
   echo "Yes, you have root permissions!"
