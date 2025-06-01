@@ -151,8 +151,8 @@ echo "There is lots of way to compare value like string and numbers differenctly
 #!/usr/bin/env bash
 #This file demonstrates simple string manipulation with variables.
 echo -----
-A="Sahil" 				#Note you should ALWAYS use quotes around text when assigning it to variable.
-B="${A} Rajput"  	#This is how we add text to string in bash.
+A="Sahil"       #Note you should ALWAYS use quotes around text when assigning it to variable.
+B="${A} Rajput" #This is how we add text to string in bash.
 
 echo $A
 echo $B
@@ -306,7 +306,7 @@ done
 # we enable debug mode with above -x
 
 # 🚀 Run a command on program exit
-# 🚀 Learn `wait` command.
+# 🚀 Learn `wait`, `sleep` command.
 
 # ✅ Learn: You can use microseconds with sleep command too:
 # sleep 0.1
@@ -326,7 +326,8 @@ COMMAND="rm abc.txt"
 #   2. ctrl+c i.e., [SIGINT (2)]
 trap "$COMMAND" exit
 
-# sleep 100
+# Create a background running program --- check it vai `pgrep sleep`
+sleep 100 &
 
 # ✅ `wait` command
 # * 1️⃣ The wait command in Bash pauses the execution of a script until
