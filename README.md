@@ -269,6 +269,32 @@ fi
 ### File - `11.1.0.sh`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./11.1.0.sh) -->
+<!-- The below code snippet is automatically added from ./11.1.0.sh -->
+```sh
+#!/bin/bash
+
+# 🚀 Run process in background in macos using `air` function from ~/.zshrc (#true background process, #detach process)
+# 🚀 Send system notifications in macos
+
+#   Usage: In macos you can run this script in background via: [✅TESTED]
+#   air -l 11.1.0.log bash 11.1.0.sh
+echo "PID: $"
+
+# Also:
+#  ✅To view process id do    `pgrep -f 11.1.0.sh`
+#  ✅To kill background process then you can use      ```pkill -f 11.1.0.sh```
+
+counter=0
+while true; do
+    counter=$((counter + 1)) # increment by 1
+    # We output counts to stdout to test viewing logs of this process anytime in future:
+    echo $counter
+
+    # We send system notifications so we can know that process is runnning anytime in future:
+    osascript -e "display notification \"$counter\" with title \"Test\""
+    sleep 2
+done
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### File - `11.1.sh`
