@@ -698,3 +698,14 @@ echo ${array[*]}
 # ${array[*]}: All elements are treated as one word, especially inside quotes.
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
+
+
+### File - `18.1.sh`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./18.1.sh) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
+
+### File - `18.2.sh`
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./18.2.sh) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
