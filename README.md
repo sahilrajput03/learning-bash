@@ -703,9 +703,39 @@ echo ${array[*]}
 ### File - `18.1.sh`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./18.1.sh) -->
+<!-- The below code snippet is automatically added from ./18.1.sh -->
+```sh
+#!/bin/bash
+
+# 1. My own cronjob (inspiration: https://chatgpt.com/c/6841590c-8708-8007-a55e-81307fee6562)
+
+while true; do
+    current_time=$(date +%H:%M:%S)
+    echo $current_time
+
+    target_time="14:46:50"
+    if [ "$current_time" == "$target_time" ]; then
+        echo ✅ The time is $target_time.
+    fi
+    sleep 1
+done
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### File - `18.2.sh`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./18.2.sh) -->
+<!-- The below code snippet is automatically added from ./18.2.sh -->
+```sh
+#!/usr/bin/env bash
+
+# 2. My own cronjob (inspiration: https://chatgpt.com/c/6841590c-8708-8007-a55e-81307fee6562)
+
+# ! [NOT TESTED YET]
+
+target_epoch=$(date -d "14:05" +%s)
+current_epoch=$(date +%s)
+sleep_seconds=$((target_epoch - current_epoch))
+[ $sleep_seconds -gt 0 ] && sleep $sleep_seconds
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
