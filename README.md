@@ -25,7 +25,7 @@ Simple echo example.
 <!-- The below code snippet is automatically added from ./0.sh -->
 ```sh
 #!/usr/bin/env bash
-# set -x
+
 echo Hello, from example.
 
 # 🚀 My recent bash scripts:
@@ -40,8 +40,11 @@ echo Hello, from example.
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./1.sh) -->
 <!-- The below code snippet is automatically added from ./1.sh -->
 ```sh
-#!/usr/bin/env bash
-echo Hello i am sahil.
+#!/usr/bin/env bash -x
+# We enable debug mode with above -x above. Alternatively, we can run
+#   `set -x` explicitly to enable it and `set +x` to disable it.
+
+echo Hello, I am sahil.
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
