@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# 🚀 Run multiple commands on failure of some commands
+# 🚀 Run multiple commands on failure of some commands via using braces way
 
 # setup
 TEMP_DIR=""
