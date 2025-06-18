@@ -23,8 +23,16 @@ done &
 PID2=$!
 echo "PID2: $PID2"
 
+# Print all background jobs:
+echo "Background jobs process ids via 'jobs -p':"
+jobs -p
+
 # This is executed when you press ctrl+c
 trap "kill $PID1 $PID2; echo 'Killed background operations.'" EXIT
+
+# ✅ Kill background jobs via `jobs -p` [TESTED]
+# Kill all background jobs on exit:
+# trap 'kill $(jobs -p)' EXIT
 
 wait
 
