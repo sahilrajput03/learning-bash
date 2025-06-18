@@ -182,8 +182,8 @@ a() {
 }
 a
 exitCode=$?
-echo -e "Return value/Exit code of function a: $exitCode \n"
-# OUTPUT: Return value/Exit code of function a: 0
+echo -e "returnValue/exitCode of function a: $exitCode \n"
+# OUTPUT: returnValue/exitCode code of function a: 0
 
 a() {
     echo "🚀Running function a"
@@ -191,8 +191,8 @@ a() {
 }
 a
 exitCode=$?
-echo -e "Return value/Exit code of function a: $exitCode \n"
-# OUTPUT: Return value/Exit code of function a: 0
+echo -e "returnValue/exitCode of function a: $exitCode \n"
+# OUTPUT: returnValue/exitCode of function a: 0
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
