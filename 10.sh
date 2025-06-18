@@ -9,15 +9,18 @@ if [ -e "10.sh" ]; then
 else
     echo "❌File does not exist."
 fi
+# Output: ✅File exists.
 
 if [ -f "10.sh" ]; then
     echo "✅File exists."
 else
     echo "❌File does not exist."
 fi
+# Output: ✅File exists.
 
 if [ -d ".github" ]; then
     echo "✅Directory exists."
 else
     echo "❌Directory does not exist."
 fi
+# Output: ✅Directory exists.
