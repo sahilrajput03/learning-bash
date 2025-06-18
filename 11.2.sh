@@ -1,5 +1,4 @@
 #!/usr/bin/env bash -x
-# we enable debug mode with above -x
 
 # 🚀 Run a bash function on program exit
 

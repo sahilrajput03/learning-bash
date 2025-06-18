@@ -1,5 +1,4 @@
 #!/usr/bin/env bash -x
-# we enable debug mode with above -x
 
 # 🚀 Run a command on program exit
 # 🚀 Learn `wait`, `sleep` command.
@@ -16,24 +15,25 @@
 # Create file abc.txt
 touch abc.txt
 
-COMMAND="rm abc.txt"
-# Runs command if:
+# Learn: `trap` runs command if:
 #   1. program exit natually on its own.
 #   2. ctrl+c i.e., [SIGINT (2)]
+COMMAND="rm abc.txt"
 trap "$COMMAND" exit
 
-# Create a background running program --- check it vai `pgrep sleep`
+# Create a background running program --- check it via `pgrep sleep`
 sleep 100 &
 
 # ✅ `wait` command
-# * 1️⃣ The wait command in Bash pauses the execution of a script until
-#      all background jobs or a specific job (by PID or job ID) finish.
-#   It returns the exit status of the waited-for process.
-#   Usage:
+# 1. The wait command in Bash pauses the execution of a script until
+#      all background jobs or a specific job (by PID or job ID)
+#      finish.
+# 2. It returns the exit status of the waited-for process.
+# 3. Usage:
 #       wait → waits for all background jobs to complete.
 #       wait <PID> → waits for a specific process ID to complete.
 #       wait %<job_id> → waits for a specific job (e.g., %1) to complete.
-#  2️⃣ ✅ Keep the script running until previous background processes
+# 4. Keep the script running until previous background processes
 #    before the wait command are running so you can intercept ctrl+c
 #    signal to kill this script and trigger trap command to kill the
 #    earlier background processes as well.

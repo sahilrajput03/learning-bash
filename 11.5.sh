@@ -1,5 +1,4 @@
 #!/usr/bin/env bash -x
-# we enable debug mode with above -x
 
 # 🚀 Kill process using `pkill` to match process name on exit
 

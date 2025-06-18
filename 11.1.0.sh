@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-# 🚀 Run process in background in macos using `air` function from ~/.zshrc (Tags: #true background process, #detach process)
 # 🚀 Send system notifications in macos
 
-#   Usage: In macos you can run this script in background via: [✅TESTED]
+# 🚀 You can run a process in background in macos using `air` function
+#       from the file ~/.zshrc (Tags: #true background process,
+#           #detach process). [✅TESTED]
 #   air -l 11.1.0.log bash 11.1.0.sh
 echo "PID: $$"
 
