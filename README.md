@@ -589,22 +589,19 @@ BadCommand && echo Success✅ || echo Failed❌ && echo Failed2❌
 ### File - `13.2.sh`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./13.2.sh) -->
-<!-- The below code snippet is automatically added from ./13.1.sh -->
+<!-- The below code snippet is automatically added from ./13.2.sh -->
 ```sh
 #!/usr/bin/env bash
 
-# 🚀 Run commands on failure of some commands via inline way
+# 🚀 Run multiple commands on failure of some commands via using braces way
 
-echo Good Command && echo Success✅ && echo Success2✅ || echo Failed❌
-# Good Command
-# Success✅
-# Success2✅
-
-BadCommand && echo Success✅ || echo Failed❌ && echo Failed2❌
-# Output:
-# ./13.1.sh: line 10: BadCommand: command not found
-# Failed❌
-# Failed2❌
+# setup
+TEMP_DIR=""
+mkdir "$TEMP_DIR" && cd "$TEMP_DIR" || {
+    echo "Error: Failed to create directory [$TEMP_DIR], aborting early"
+    echo "Bye bye 👋"
+    exit 1
+}
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
