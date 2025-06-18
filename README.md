@@ -24,9 +24,14 @@ Simple echo example.
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./0.sh) -->
 <!-- The below code snippet is automatically added from ./0.sh -->
 ```sh
-#!/usr/bin/env bash
+#!/usr/bin/env bash -x
+# We enable debug mode with above -x above. Alternatively, we can run
+#   `set -x` explicitly to enable it and `set +x` to disable it.
 
 echo Hello, from example.
+# Output:
+#   + echo Hello, from example.
+#   Hello, from example.
 
 # 🚀 My recent bash scripts:
 # qr-solution-backend/scripts/consistent-dev.mypot.in.sh
@@ -41,10 +46,16 @@ echo Hello, from example.
 <!-- The below code snippet is automatically added from ./1.sh -->
 ```sh
 #!/usr/bin/env bash -x
-# We enable debug mode with above -x above. Alternatively, we can run
-#   `set -x` explicitly to enable it and `set +x` to disable it.
 
 echo Hello, I am sahil.
+
+if [ "$SHELL" = "/bin/zsh" ]; then
+    echo "✅Shell is /bin/zsh"
+else
+    echo "❤️SHELL is $SHELL"
+fi
+# Output (in zsh shell in macos):
+#    ✅Shell is /bin/zsh
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -680,9 +691,11 @@ echo
 #        output of time to grep
 echo -n "✅real time: "
 { time sleep 1; } 2>&1 | grep "real" | awk '{print $2}'
+# Output: ✅real time: 0m1.013s
 
 echo -n "✅real time: "
 { time bash -c 'sleep 1 && sleep 1'; } 2>&1 | grep "real" | awk '{print $2}'
+# Output: ✅real time: 0m2.037s
 
 calculate_time() {
     local cmd="$1"
@@ -692,6 +705,13 @@ calculate_time() {
 
 # Example usage
 calculate_time 'sleep 1 && echo boom && sleep 1'
+# Output:
+# boom
+#
+# real    0m2.031s
+# user    0m0.010s
+# sys     0m0.013s
+# ✅real time: 0m2.031s
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -759,11 +779,20 @@ done
 
 # 2. My own cronjob (inspiration: https://chatgpt.com/c/6841590c-8708-8007-a55e-81307fee6562)
 
-# ! [NOT TESTED YET]
-
-target_epoch=$(date -d "14:05" +%s)
+targetTime="19:59"
+# ✅Tested in Macos     (In bash most probably the code from chatgpt link above will work)
+target_epoch=$(date -j -f "%Y-%m-%d %H:%M" "$(date +%Y-%m-%d) $targetTime" +%s)
+echo 🚀 ~ target_epoch: $target_epoch
 current_epoch=$(date +%s)
+echo 🚀 ~ current_epoch: $current_epoch
 sleep_seconds=$((target_epoch - current_epoch))
-[ $sleep_seconds -gt 0 ] && sleep $sleep_seconds
+echo 🚀 ~ sleep_seconds: $sleep_seconds
+
+if [ $sleep_seconds -gt 0 ]; then
+    sleep $sleep_seconds
+else
+    echo "❌Error: Sleep seconds must be greater than 0" >&2
+    exit 1
+fi
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
