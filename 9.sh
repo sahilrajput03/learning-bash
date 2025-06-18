@@ -14,7 +14,7 @@ b() {
     echo "🚀Running function b"
     # Learn: We are using `return` to return the exit code of function a
     a || return
-    echo "🎉 Function b ends here." # This line is never run.
+    echo "🎉 Function b ends here." # ❌This line is never run.
 }
 b
 exitCode=$?
@@ -24,7 +24,7 @@ echo -e "Return value/Exit code of function b: $exitCode \n"
 c() {
     echo "🚀Running function c"
     a || return 2
-    echo "🎉 Function c ends here." # This line is never run.
+    echo "🎉 Function c ends here." # ❌This line is never run.
 }
 c
 exitCode=$?
