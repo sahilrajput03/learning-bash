@@ -597,25 +597,6 @@ BadCommand && echo Success✅ || echo Failed❌ && echo Failed2❌
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
-### File - `13.2.sh`
-
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./13.2.sh) -->
-<!-- The below code snippet is automatically added from ./13.2.sh -->
-```sh
-#!/usr/bin/env bash
-
-# 🚀 Run multiple commands on failure of some commands via using braces way
-
-# setup
-TEMP_DIR=""
-mkdir "$TEMP_DIR" && cd "$TEMP_DIR" || {
-    echo "Error: Failed to create directory [$TEMP_DIR], aborting early"
-    echo "Bye bye 👋"
-    exit 1
-}
-```
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
 ### File - `14.sh`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./14.sh) -->
