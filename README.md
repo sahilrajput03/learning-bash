@@ -381,12 +381,13 @@ wait
 
 # 🚀 Kill all background jobs using `jobs -p` on exit
 
-# create two processes with sleep 5 in background and kill them on exit with trap
-sleep 1000 &
-sleep 1000 &
+# create two processes for 99 seconds in background and kill them on exit with trap
+sleep 99 &
+sleep 99 &
 
-# Kill all background jobs on exit:
-trap 'kill $(jobs -p)' EXIT
+# ✅ Kill all background jobs on exit via `jobs -p` [TESTED]
+bgProcessIds="$(jobs -p | xargs)"
+trap "kill $bgProcessIds; echo '✅Killed background processes: $bgProcessIds'" EXIT
 
 # In any temrinal you can check if the process is running with:
 # ps aux | grep '[s]leep 1000'
@@ -479,10 +480,11 @@ echo "Background jobs process ids via 'jobs -p':"
 jobs -p
 
 # This is executed when you press ctrl+c
-trap "kill $PID1 $PID2; echo 'Killed background operations.'" EXIT
+trap "kill $PID1 $PID2; echo '✅Killed background processes: $PID1 $PID2'" EXIT
 
 # ✅ Kill all background jobs on exit via `jobs -p` [TESTED]
-# trap 'kill $(jobs -p)' EXIT
+# bgProcessIds="$(jobs -p | xargs)"
+# trap "kill $bgProcessIds; echo '✅Killed background processes: $bgProcessIds'" EXIT
 
 wait
 
