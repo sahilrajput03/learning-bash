@@ -28,10 +28,11 @@ echo "Background jobs process ids via 'jobs -p':"
 jobs -p
 
 # This is executed when you press ctrl+c
-trap "kill $PID1 $PID2; echo 'Killed background operations.'" EXIT
+trap "kill $PID1 $PID2; echo '✅Killed background processes: $PID1 $PID2'" EXIT
 
 # ✅ Kill all background jobs on exit via `jobs -p` [TESTED]
-# trap 'kill $(jobs -p)' EXIT
+# bgProcessIds="$(jobs -p | xargs)"
+# trap "kill $bgProcessIds; echo '✅Killed background processes: $bgProcessIds'" EXIT
 
 wait
 
