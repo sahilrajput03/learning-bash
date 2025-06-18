@@ -2,8 +2,6 @@
 
 # 2. My own cronjob (inspiration: https://chatgpt.com/c/6841590c-8708-8007-a55e-81307fee6562)
 
-# ! [NOT TESTED YET]
-
 targetTime="19:59"
 # ✅Tested in Macos     (In bash most probably the code from chatgpt link above will work)
 target_epoch=$(date -j -f "%Y-%m-%d %H:%M" "$(date +%Y-%m-%d) $targetTime" +%s)
