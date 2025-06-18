@@ -45,17 +45,20 @@ echo Hello, from example.
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./1.sh) -->
 <!-- The below code snippet is automatically added from ./1.sh -->
 ```sh
-#!/usr/bin/env bash -x
-
-echo Hello, I am sahil.
+#!/usr/bin/env bash
 
 if [ "$SHELL" = "/bin/zsh" ]; then
     echo "✅Shell is /bin/zsh"
 else
     echo "❤️SHELL is $SHELL"
 fi
-# Output (in zsh shell in macos):
+# Output (in zsh shell):
 #    ✅Shell is /bin/zsh
+
+# Process id of this script:
+echo "PID: $" # double $ sign [autodocs issue]
+# Output:
+# PID: 8264
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -305,7 +308,7 @@ fi
 #       from the file ~/.zshrc (Tags: #true background process,
 #           #detach process). [✅TESTED]
 #   air -l 11.1.0.log bash 11.1.0.sh
-echo "PID: $"
+echo "PID: $" # double $ sign [autodocs issue]
 
 # Also:
 #  ✅To view process id do    `pgrep -f 11.1.0.sh`
