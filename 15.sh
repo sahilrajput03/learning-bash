@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# ❤️ Force a script to be run in current shell by throwing error if run without `source` or `.`
 # * 🚀 Using `&` to run commands in background and switching to them using `fg`
 
 # & ⚠️ NOTE: This script must be sourced (run with 'source' command or
