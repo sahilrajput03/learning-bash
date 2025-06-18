@@ -6,7 +6,7 @@
 #       from the file ~/.zshrc (Tags: #true background process,
 #           #detach process). [✅TESTED]
 #   air -l 11.1.0.log bash 11.1.0.sh
-echo "PID: $$"
+echo "PID: $$" # double $ sign [autodocs issue]
 
 # Also:
 #  ✅To view process id do    `pgrep -f 11.1.0.sh`
