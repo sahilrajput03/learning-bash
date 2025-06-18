@@ -202,7 +202,7 @@ echo -e "returnValue/exitCode of function a: $exitCode \n"
 <!-- The below code snippet is automatically added from ./9.sh -->
 ```sh
 #!/usr/bin/env bash
-# * Learn about `return` and `exit` keyword
+# * Learn about `return` and `exit` keywords
 
 a() {
     echo "🚀Running function a"
