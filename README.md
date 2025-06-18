@@ -570,33 +570,41 @@ echo "Exit status of 'false' command: $?"
 <!-- The below code snippet is automatically added from ./13.1.sh -->
 ```sh
 #!/usr/bin/env bash
-echo Good Command && echo Success✅ || echo Failed❌
+
+# 🚀 Run commands on failure of some commands via inline way
+
+echo Good Command && echo Success✅ && echo Success2✅ || echo Failed❌
 # Good Command
 # Success✅
+# Success2✅
 
-BadCommand && echo Success✅ || echo Failed❌
+BadCommand && echo Success✅ || echo Failed❌ && echo Failed2❌
 # Output:
-# 4: BadCommand: command not found
+# ./13.1.sh: line 10: BadCommand: command not found
 # Failed❌
+# Failed2❌
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ### File - `13.1.sh`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./13.1.sh) -->
-<!-- The below code snippet is automatically added from ./13.sh -->
+<!-- The below code snippet is automatically added from ./13.1.sh -->
 ```sh
 #!/usr/bin/env bash
 
-# 🚀 Run multiple commands on failure of some commands
+# 🚀 Run commands on failure of some commands via inline way
 
-# setup
-TEMP_DIR=""
-mkdir "$TEMP_DIR" && cd "$TEMP_DIR" || {
-    echo "Error: Failed to create directory [$TEMP_DIR], aborting early"
-    echo "Bye bye 👋"
-    exit 1
-}
+echo Good Command && echo Success✅ && echo Success2✅ || echo Failed❌
+# Good Command
+# Success✅
+# Success2✅
+
+BadCommand && echo Success✅ || echo Failed❌ && echo Failed2❌
+# Output:
+# ./13.1.sh: line 10: BadCommand: command not found
+# Failed❌
+# Failed2❌
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
